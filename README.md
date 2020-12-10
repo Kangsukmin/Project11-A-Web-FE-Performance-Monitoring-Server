@@ -35,15 +35,20 @@
 
 ---
 
-## 목차
+### Repository
+- [FrontEnd Repository](https://github.com/boostcamp-2020/Project11-A-Web-FE-Performance-Monitoring-admin)
+- [BackEnd Repository](https://github.com/boostcamp-2020/Project11-A-Web-FE-Performance-Monitoring-server)
+- [SDK Repository](https://github.com/boostcamp-2020/Project11-A-Web-FE-Performance-Monitoring-SDK)
+- [통합 위키](https://github.com/boostcamp-2020/Project11-A-Web-FE-Performance-Monitoring-SDK/wiki)
+
+## Highlights
 
 - [프로젝트 개요](#프로젝트)
+- [Install](#Install)
+- [Usage](#사용법)
+- [멤버](#멤버)
+- [개발환경](#개발환경)
 
-### 저장소 주소
-[FrontEnd Repository](https://github.com/boostcamp-2020/Project11-A-Web-FE-Performance-Monitoring-admin)<br>
-[BackEnd Repository](https://github.com/boostcamp-2020/Project11-A-Web-FE-Performance-Monitoring-server)<br>
-[SDK Repository](https://github.com/boostcamp-2020/Project11-A-Web-FE-Performance-Monitoring-SDK)<br>
-[통합 위키](https://github.com/boostcamp-2020/Project11-A-Web-FE-Performance-Monitoring-SDK/wiki)<br>
 
 ## Members
 |[![](https://github.com/kangsukmin.png)](https://github.com/kangsukmin)|[![](https://github.com/gitdog01.png)](https://github.com/gitdog01)|[![](https://github.com/Eunbin-Kim.png)](https://github.com/Eunbin-Kim)|[![](https://github.com/maong0927.png)](https://github.com/maong0927)|
@@ -51,17 +56,20 @@
 |[J005 강석민](https://github.com/kangsukmin)|[J049 김원호](https://github.com/gitdog01)|[J050 김은빈](https://github.com/Eunbin-Kim)|[J071 문혜라](https://github.com/maong0927)|
 
 
-## 프로젝트 개요
+## 프로젝트 
+
+[Back](#Highlights)
 
 &nbsp;**Santry** 는 오류를 수집하는 SDK를 NPM을 통해서 배포하여, 발생하는 오류들을 모아서 서버에 저장하고, 그에 대한 상황과 통계를 알려주는 Admin 페이지를 제공합니다. 
 &nbsp;여러분에 Application에서 발생하는 오류들을 찾는 데 도움을 드려 더욱 행복한 개발환경에서 개발하셨으면 좋겠습니다.
  
-## 함께 시작해볼까요?
-- [브라우저 버전](https://www.npmjs.com/package/@santry/browser)
+## Install
+
+### [For Browser](https://www.npmjs.com/package/@santry/browser)
 ```
 $ npm install @santry/browser
 ```
-- [노드 버전](https://www.npmjs.com/package/@santry/browser) 
+### [For Node.js](https://www.npmjs.com/package/@santry/browser) 
 ```
 $ npm install @santry/node
 ```
