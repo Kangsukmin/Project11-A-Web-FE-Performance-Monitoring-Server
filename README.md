@@ -37,7 +37,7 @@
 
 ## 목차
 
-- [프로젝트 개요](#프로젝트 개요)
+- [프로젝트 개요](#프로젝트)
 
 ### 저장소 주소
 [FrontEnd Repository](https://github.com/boostcamp-2020/Project11-A-Web-FE-Performance-Monitoring-admin)<br>
