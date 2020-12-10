@@ -142,7 +142,7 @@ app.listen(3000);
 
 **If you want to set level in message or error. Try using setLevel Function!**
 
-```jsx=
+```jsx
 const { setLevel, captureMessage } = require('@santry/node');
 
 
