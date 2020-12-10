@@ -47,7 +47,7 @@
 
 ## Members
 
-|<img src="https://github.com/kangsukmin.png" width=80 >|<img src="https://github.com/gitdog01.png" width=80 >|<img src="https://github.com/Eunbin-Kim.png" width=80 >|<img src="https://github.com/maong0927.png" width=80 >|
+|<img src="https://github.com/kangsukmin.png" width=100 >|<img src="https://github.com/gitdog01.png" width=100 >|<img src="https://github.com/Eunbin-Kim.png" width=100 >|<img src="https://github.com/maong0927.png" width=100 >|
 :---:|:---:|:---:|:---:
 |[J005 강석민](https://github.com/kangsukmin)|[J049 김원호](https://github.com/gitdog01)|[J050 김은빈](https://github.com/Eunbin-Kim)|[J071 문혜라](https://github.com/maong0927)|
 
@@ -69,7 +69,7 @@
 - 기존에 프로젝트를 운영하면서 에러와 기록을 로그파일로 저장합니다.
 - 로그 자체를 CLI로 관리할 경우 가독성이 떨어지며 에러레벨을 구분하기 힘듭니다.
 
-|![](https://i.imgur.com/6PkBx5S.png =300x200)|![](https://i.imgur.com/BDYs557.png =300x200)|
+|<img src="https://i.imgur.com/6PkBx5S.png" width=300 height=200 />|<img src="https://i.imgur.com/BDYs557.png" width=300 height=200 />|
 :---:|:---:
 | 사용 전 | 사용 후 |
 
