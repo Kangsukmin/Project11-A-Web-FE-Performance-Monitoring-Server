@@ -35,25 +35,27 @@
 
 ---
 
-### Repository
+## Repository
 - [FrontEnd Repository](https://github.com/boostcamp-2020/Project11-A-Web-FE-Performance-Monitoring-admin)
 - [BackEnd Repository](https://github.com/boostcamp-2020/Project11-A-Web-FE-Performance-Monitoring-server)
 - [SDK Repository](https://github.com/boostcamp-2020/Project11-A-Web-FE-Performance-Monitoring-SDK)
 - [통합 위키](https://github.com/boostcamp-2020/Project11-A-Web-FE-Performance-Monitoring-SDK/wiki)
 
+## Members
+
+|<img src="https://github.com/kangsukmin.png" width=80 >|<img src="https://github.com/gitdog01.png" width=80 >|<img src="https://github.com/Eunbin-Kim.png" width=80 >|<img src="https://github.com/maong0927.png" width=80 >|
+:---:|:---:|:---:|:---:
+|[J005 강석민](https://github.com/kangsukmin)|[J049 김원호](https://github.com/gitdog01)|[J050 김은빈](https://github.com/Eunbin-Kim)|[J071 문혜라](https://github.com/maong0927)|
+
 ## Highlights
 
 - [프로젝트 개요](#프로젝트)
 - [Install](#Install)
-- [Usage](#사용법)
+- [Usage](#Get-Started)
 - [멤버](#멤버)
 - [개발환경](#개발환경)
 
 
-## Members
-|[![](https://github.com/kangsukmin.png)](https://github.com/kangsukmin)|[![](https://github.com/gitdog01.png)](https://github.com/gitdog01)|[![](https://github.com/Eunbin-Kim.png)](https://github.com/Eunbin-Kim)|[![](https://github.com/maong0927.png)](https://github.com/maong0927)|
-:---:|:---:|:---:|:---:
-|[J005 강석민](https://github.com/kangsukmin)|[J049 김원호](https://github.com/gitdog01)|[J050 김은빈](https://github.com/Eunbin-Kim)|[J071 문혜라](https://github.com/maong0927)|
 
 
 ## 프로젝트 
@@ -62,21 +64,104 @@
 
 &nbsp;**Santry** 는 오류를 수집하는 SDK를 NPM을 통해서 배포하여, 발생하는 오류들을 모아서 서버에 저장하고, 그에 대한 상황과 통계를 알려주는 Admin 페이지를 제공합니다. 
 &nbsp;여러분에 Application에서 발생하는 오류들을 찾는 데 도움을 드려 더욱 행복한 개발환경에서 개발하셨으면 좋겠습니다.
- 
+
 ## Install
 
-### [For Browser](https://www.npmjs.com/package/@santry/browser)
+[Back](#Highlights)
+
+### <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/a/a5/Google_Chrome_icon_%28September_2014%29.svg/768px-Google_Chrome_icon_%28September_2014%29.svg.png" width=20 > [For Browser](https://www.npmjs.com/package/@santry/browser) <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/a/a0/Firefox_logo%2C_2019.svg/131px-Firefox_logo%2C_2019.svg.png" width=20 > 
+
 ```
 $ npm install @santry/browser
 ```
-### [For Node.js](https://www.npmjs.com/package/@santry/browser) 
+### <img src="https://cdn.worldvectorlogo.com/logos/nodejs-icon.svg" width=20 > [For Node.js / Express](https://www.npmjs.com/package/@santry/browser) <img src="https://symbols.getvecta.com/stencil_22/9_nodejs.29834badea.svg" width=20 >
 ```
 $ npm install @santry/node
 ```
 
-## 제공하는 기능
+## Get Started
 
-- 다양한 종류의 ErrorCatch을 위한 도구 제공
+### Usage
+
+- Node.js
+
+```jsx
+const { init, captureMessage, captureError } = require('@santry/node');
+const dsn = [token]@[URL]; // Set Your Project Token
+    
+init(dsn); // Required!
+    
+// if you want to get Message
+~~Your Code~~
+captureMessage("hello I'm SAntry");
+
+// if you want to get Error
+try {
+  throw new Error('testing Error');
+} catch (error) {
+  captureError(error);
+}
+    
+```
+
+- Express
+
+```jsx
+const express = require('express');
+const { init, errorHandler, captureMessage } = require('@santry/node');
+
+const app = express();
+const dsn = [token]@[URL]; // Set Your Project Token
+    
+init(dsn); // Required!
+
+// if you want to get Message
+app.get('/', function rootHandler(req, res) {
+  captureMessage("hello I'm SAntry");
+  res.end('Hello world!');
+});
+
+// if you want to get Error
+app.get('/debug-sentry', function mainHandler(req, res) {
+  console.log(req);
+  throw new Error('My second Sentry error get!');
+});
+
+app.use(errorHandler());
+
+app.use(function onError(err, req, res, next) {
+  res.statusCode = 500;
+  res.end('good santry!');
+});
+
+app.listen(3000);
+    
+```
+
+### Set Level
+
+**If you want to set level in message or error. Try using setLevel Function!**
+
+```jsx=
+const { setLevel, captureMessage } = require('@santry/node');
+
+
+const testError = () => {
+  try {
+    throw new Error('Fatal Level Error!');
+  } catch (error) {
+    setLevel('fatal');
+    captureError(error);
+  }
+};
+```
+
+## 개발환경
+
+![](https://i.imgur.com/yTffMG0.png)
+
+<!--
+
 ```jsx
 // 기본적인 에러 Catch 부터
   try {
@@ -98,7 +183,6 @@ $ npm install @santry/node
 // express 에 제공하는 errorHandler middleware
   app.use(errorHandler());
 
-
 ```
 
 - 프로젝트 단위로 관리를 할 수 있습니다.<br>
@@ -108,5 +192,4 @@ $ npm install @santry/node
 
 - 이슈 관리에서는 하나의 오류 정보부터, Tag의 통계, 이슈에 대해 커뮤니케이션을 할 수 있는 comment 기능등을 지원합니다.
  
-
-
+-->
