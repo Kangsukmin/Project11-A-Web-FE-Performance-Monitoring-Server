@@ -49,7 +49,7 @@
 
 ## Highlights
 
-- [프로젝트 개요](#프로젝트)
+- [프로젝트 개요](#프로젝트-개요)
 - [Install](#Install)
 - [Usage](#Get-Started)
 - [멤버](#멤버)
@@ -58,7 +58,7 @@
 
 
 
-## 프로젝트 
+## 프로젝트 개요
 
 [Back](#Highlights)
 
@@ -80,6 +80,8 @@ $ npm install @santry/node
 ```
 
 ## Get Started
+
+[Back](#Highlights)
 
 ### Usage
 
